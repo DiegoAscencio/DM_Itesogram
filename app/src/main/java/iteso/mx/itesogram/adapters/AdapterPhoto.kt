@@ -1,7 +1,6 @@
 package iteso.mx.itesogram.adapters
 
 import android.graphics.BitmapFactory
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,22 +11,22 @@ import iteso.mx.itesogram.Feed
 import iteso.mx.itesogram.R
 
 
-class AdapterPhoto (private val feed: ArrayList<Feed>): RecyclerView.Adapter<ViewHolder>() {
+class AdapterPhoto (private val feed: ArrayList<Feed>): RecyclerView.Adapter<PhotoViewHolder>() {
 
-         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_photo, parent, false)
-            return ViewHolder(view)
+            return PhotoViewHolder(view)
         }
 
         override fun getItemCount(): Int = feed.size
 
 
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
             holder.bind(feed[position])
         }
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class PhotoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val nameTitle: TextView = view.findViewById(R.id.name)
         private val iPhoto: ImageView = view.findViewById(R.id.image)
         private val likes: TextView = view.findViewById(R.id.nLikes)
