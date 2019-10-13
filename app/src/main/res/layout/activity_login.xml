@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".ActivityLogin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_login_iv_itesogram"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/itesogram"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_til_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_til_username"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/activity_login_user"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_til_password"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_iv_itesogram">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_til_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/activity_login_password"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_btn_login"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_til_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/activity_login_login"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_tv_forgot_question"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_til_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_forgot_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/activity_login_forgot_question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_login_tv_forgot_action"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_btn_login" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_forgot_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_login_forgot_action"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_login_tv_forgot_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_login_tv_forgot_question"
+        app:layout_constraintTop_toTopOf="@id/activity_login_tv_forgot_question" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_create_account_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_login_create_account_question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_login_tv_create_account_action"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_create_account_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/activity_login_create_account_action"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_login_tv_create_account_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_login_tv_create_account_question"
+        app:layout_constraintTop_toTopOf="@id/activity_login_tv_create_account_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

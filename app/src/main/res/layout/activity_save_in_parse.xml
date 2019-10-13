@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".ActivitySaveInParse">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_til_value"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Valor en Parse"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_btn_save"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_tiet_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/newBlue"
+        app:layout_constraintBottom_toTopOf="@id/activity_tv_value"
+        android:text="Guardar en Parse"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/activity_til_value" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_tv_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/acitivity_btn_fetch"
+        android:gravity="center"
+        android:text="No se ha pedido el valor"
+        app:layout_constraintTop_toBottomOf="@id/activity_btn_save" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/acitivity_btn_fetch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/newBlue"
+        android:text="Obtener valor"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_tv_value" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Itesogram</string>
+    <string name="activity_login_user">Teléfono, correo electrónico o usuario</string>
+    <string name="activity_login_password">Contraseña</string>
+    <string name="activity_login_login">Iniciar Sesión</string>
+    <string name="activity_login_forgot_question">¿Olvidaste tus datos de inicio de sesión?</string>
+    <string name="activity_login_forgot_action">Obtén ayuda.</string>
+    <string name="activity_login_create_account_question">¿No tienes cuenta?</string>
+    <string name="activity_login_create_account_action">Regístrate.</string>
+</resources>
